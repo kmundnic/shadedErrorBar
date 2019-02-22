@@ -182,12 +182,13 @@ function H = makePlot(x,y,errBar,lineProps,transparent,patchSaturation)
 
     set(H.patch,'facecolor',patchColor, ...
         'edgecolor','none', ...
-        'facealpha',faceAlpha)
+        'facealpha',faceAlpha, ...
+        'HandleVisibility','off')
 
 
     %Make pretty edges around the patch. 
-    H.edge(1)=plot(x,lE,'-','color',edgeColor);
-    H.edge(2)=plot(x,uE,'-','color',edgeColor);
+    H.edge(1)=plot(x,lE,'-','color',edgeColor,'HandleVisibility','off');
+    H.edge(2)=plot(x,uE,'-','color',edgeColor,'HandleVisibility','off');
 
 
 
