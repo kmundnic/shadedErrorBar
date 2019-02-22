@@ -51,6 +51,7 @@ y = bsxfun(@plus,y,yP)+60;
 %Make red line non-transparent
 shadedErrorBar(x, y, {@mean,@std}, 'lineprops', '-r','transparent',false,'patchSaturation',0.075)
 hold off
+legend('blue', 'green', 'red')
 
 grid on
 
